@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.galileo.android.happybirthdayapp.MainActivity">
+    <item
+        android:id="@+id/action_about_me"
+        android:orderInCategory="100"
+        android:title="@string/action_about_me"
+        app:showAsAction="never"
+        android:onClick="loadAboutMe"/>
+</menu>
