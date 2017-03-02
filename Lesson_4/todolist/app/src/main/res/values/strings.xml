@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">TodoList</string>
+	<string name="add_new_task">Add a new task</string>
+	<string name="ok">Ok</string>
+	<string name="add">Add</string>
+	<string name="cancel">Cancel</string>
+</resources>
