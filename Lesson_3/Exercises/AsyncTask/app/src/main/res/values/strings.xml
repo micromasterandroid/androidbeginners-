@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AsyncTaskExample</string>
+    <string name="get_pokemon">Get Pokemon list</string>
+</resources>
