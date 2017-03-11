@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             return newPokemonList;
         }
 
-        //This method simulate a calla to API
+        //This method simulate a call to API
         private String simulateCalltoAPI(int i){
             switch (i) {
                 case 1:
