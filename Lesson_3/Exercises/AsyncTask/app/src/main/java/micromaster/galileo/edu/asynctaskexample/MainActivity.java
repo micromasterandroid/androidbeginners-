@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private class DownloadPokemonTask extends AsyncTask<String, Integer, ArrayList<String>> {
+    private class DownloadPokemonTask extends AsyncTask<Void, Integer, ArrayList<String>> {
 
         private ProgressDialog dialog;
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         @Override
-        protected ArrayList<String> doInBackground(String... params) {
+        protected ArrayList<String> doInBackground(Void... params) {
             ArrayList<String> newPokemonList = new ArrayList<>();
             for (int i = 1; i <= 3; i++) {
                 try {
