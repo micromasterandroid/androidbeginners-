@@ -11,20 +11,21 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final int REQUEST_CODE = 1;
+    private static final int TIME_INTERVAL = 50000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int time = 50*1000;
-
         Intent intentAlarm = new Intent(this, BroadcastAlarm.class);
-
-        // create the object
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
-        //set the alarm for particular time
-        alarmManager.set(AlarmManager.RTC_WAKEUP,time, PendingIntent.getBroadcast(this,1,  intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
-        Toast.makeText(this, "Alarm Scheduled for Tommrrow", Toast.LENGTH_LONG).show();
+        //Set the alarm to wake up the device and set the time interval
+        //and set the broadcast receiver for this alarm
+        alarmManager.set(AlarmManager.RTC_WAKEUP, TIME_INTERVAL,
+                PendingIntent.getBroadcast(getApplicationContext(), REQUEST_CODE, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
+
     }
 }
