@@ -17,9 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Create JobScheduler
         JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+
+        //Create a component passing the JobService that we want to use
         ComponentName jobService =  new ComponentName(getPackageName(), MyJobService.class.getName());
 
+        //Create a JobInfo passing a unique JOB_ID and the jobService
+        //also set the periodic time to repeat this job
         JobInfo jobInfo =  new JobInfo.Builder(JOB_ID, jobService)
                 .setPeriodic(REFRESH_INTERVAL)
                 .build();
