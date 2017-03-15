@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DeepLinking</string>
+    <string name="depp_link">Activity open from a deep link!</string>
+</resources>
