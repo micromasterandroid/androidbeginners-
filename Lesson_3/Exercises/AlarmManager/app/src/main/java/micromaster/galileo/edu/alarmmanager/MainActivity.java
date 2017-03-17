@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent intentAlarm = new Intent(this, BroadcastAlarm.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), REQUEST_CODE, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
         //Set the alarm to wake up the device and set the time interval
         //and set the broadcast receiver for this alarm
-        alarmManager.set(AlarmManager.RTC_WAKEUP, TIME_INTERVAL,
-                PendingIntent.getBroadcast(getApplicationContext(), REQUEST_CODE, intentAlarm, PendingIntent.FLAG_UPDATE_CURRENT));
+        alarmManager.set(AlarmManager.RTC_WAKEUP, TIME_INTERVAL, pendingIntent);
 
     }
 }
