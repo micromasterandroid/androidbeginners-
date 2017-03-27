@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import micromaster.galileo.edu.databaseexample.model.Contact;
 
+import static micromaster.galileo.edu.databaseexample.database.DataBaseHelper.COLUMN_EMAIL;
 import static micromaster.galileo.edu.databaseexample.database.DataBaseHelper.COLUMN_LAST_NAME;
 import static micromaster.galileo.edu.databaseexample.database.DataBaseHelper.COLUMN_NAME;
 import static micromaster.galileo.edu.databaseexample.database.DataBaseHelper.COLUMN_PHONE_NUMBER;
@@ -40,7 +41,8 @@ public class DataBaseDAO {
     public void addContact(Contact contact) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, contact.getName());
-        values.put(COLUMN_LAST_NAME, contact.getName());
+        values.put(COLUMN_LAST_NAME, contact.getLastName());
+        values.put(COLUMN_EMAIL, contact.getEmail());
         values.put(COLUMN_PHONE_NUMBER, contact.getPhoneNumber());
 
         database.insert(TABLE_CONTACTS, null, values);
@@ -56,7 +58,8 @@ public class DataBaseDAO {
             Contact contact = new Contact();
             contact.setName(cursor.getString(1));
             contact.setLastName(cursor.getString(2));
-            contact.setPhoneNumber(cursor.getString(3));
+            contact.setEmail(cursor.getString(3));
+            contact.setPhoneNumber(cursor.getString(4));
             contactArrayList.add(contact);
 
             cursor.moveToNext();

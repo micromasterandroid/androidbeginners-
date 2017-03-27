@@ -6,10 +6,10 @@ package micromaster.galileo.edu.databaseexample.model;
 
 public class Contact {
 
-    String name;
-    String lastName;
-    String email;
-    String phoneNumber;
+    private String name;
+    private String lastName;
+    private String email;
+    private String phoneNumber;
 
     public Contact() {
     }

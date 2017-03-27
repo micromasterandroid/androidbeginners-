@@ -26,11 +26,17 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        TextView pokemonName;
+        TextView userName;
+        TextView userLastName;
+        TextView userEmail;
+        TextView userPhoneNumber;
 
         ViewHolder(View view) {
             super(view);
-            pokemonName = (TextView) view.findViewById(R.id.userName);
+            userName = (TextView) view.findViewById(R.id.userName);
+            userLastName = (TextView) view.findViewById(R.id.last_name);
+            userEmail = (TextView) view.findViewById(R.id.email);
+            userPhoneNumber = (TextView) view.findViewById(R.id.phone_number);
         }
     }
 
@@ -42,10 +48,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
         Contact contact = arrayList.get(position);
 
-        holder.pokemonName.setText(contact.getName());
+        holder.userName.setText(contact.getName());
+        holder.userLastName.setText(contact.getLastName());
+        holder.userEmail.setText(contact.getEmail());
+        holder.userPhoneNumber.setText(contact.getPhoneNumber());
     }
 
     @Override

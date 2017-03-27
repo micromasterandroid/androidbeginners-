@@ -17,6 +17,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "name";
     public static final String COLUMN_LAST_NAME = "last_name";
+    public static final String COLUMN_EMAIL = "email";
     public static final String COLUMN_PHONE_NUMBER = "phone_number";
     public static final String TABLE_CONTACTS = "contacts";
 
@@ -35,6 +36,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
                 + COLUMN_ID + " integer primary key autoincrement, "
                 + COLUMN_NAME + " TEXT, "
                 + COLUMN_LAST_NAME + " TEXT, "
+                + COLUMN_EMAIL + " TEXT, "
                 + COLUMN_PHONE_NUMBER + " TEXT "
                 + ")";
 
