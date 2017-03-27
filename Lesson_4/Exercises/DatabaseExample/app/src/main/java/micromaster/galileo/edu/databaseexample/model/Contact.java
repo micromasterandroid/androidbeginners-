@@ -8,14 +8,16 @@ public class Contact {
 
     String name;
     String lastName;
+    String email;
     String phoneNumber;
 
     public Contact() {
     }
 
-    public Contact(String name, String lastName, String phoneNumber) {
+    public Contact(String name, String lastName, String email, String phoneNumber) {
         this.name = name;
         this.lastName = lastName;
+        this.email = email;
         this.phoneNumber = phoneNumber;
     }
 
@@ -33,6 +35,14 @@ public class Contact {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhoneNumber() {

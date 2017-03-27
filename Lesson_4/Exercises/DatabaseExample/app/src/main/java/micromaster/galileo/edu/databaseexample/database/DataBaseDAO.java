@@ -54,9 +54,9 @@ public class DataBaseDAO {
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             Contact contact = new Contact();
-            contact.setName(cursor.getString(0));
-            contact.setLastName(cursor.getString(1));
-            contact.setPhoneNumber(cursor.getString(2));
+            contact.setName(cursor.getString(1));
+            contact.setLastName(cursor.getString(2));
+            contact.setPhoneNumber(cursor.getString(3));
             contactArrayList.add(contact);
 
             cursor.moveToNext();
