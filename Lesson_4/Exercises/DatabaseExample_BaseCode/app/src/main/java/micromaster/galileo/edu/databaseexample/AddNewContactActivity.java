@@ -44,7 +44,7 @@ public class AddNewContactActivity extends AppCompatActivity {
         });
     }
 
-    //TODO: Save the instance of Contact to the data base
+    //TODO: Save the instance of Contact to the database
     private void createNewContact(String name, String lastName, String email, String phoneNumber) {
         Contact contact = new Contact(name, lastName, email, phoneNumber);
         clearEditText();

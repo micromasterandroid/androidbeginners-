@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         contactAdapter.notifyDataSetChanged();
     }
 
-    //TODO: get the list of contacts from data base
+    //TODO: get the list of contacts from database
     private ArrayList<Contact> getContactsFromDB() {
         return new ArrayList<>();
     }

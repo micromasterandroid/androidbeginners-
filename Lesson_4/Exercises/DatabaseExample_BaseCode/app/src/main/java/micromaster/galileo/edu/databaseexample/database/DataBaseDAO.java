@@ -36,7 +36,7 @@ public class DataBaseDAO {
         dataBaseHelper.close();
     }
 
-    //TODO: Implement the necessary code to add a contact instance to data base
+    //TODO: Implement the necessary code to add a contact instance to database
     public void addContact(Contact contact) {
     }
 
