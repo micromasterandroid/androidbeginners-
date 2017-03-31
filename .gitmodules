@@ -1,6 +1,0 @@
-[submodule "Lesson_1/Exercises/MicroMaster_ContactList"]
-	path = Lesson_1/Exercises/MicroMaster_ContactList
-	url = https://github.com/byronap120/MicroMaster_ContactList.git
-[submodule "Lesson_1/Exercises/MicroMaster_TipCalculator"]
-	path = Lesson_1/Exercises/MicroMaster_TipCalculator
-	url = https://github.com/byronap120/MicroMaster_TipCalculator.git
